@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.GetAllPlugins</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>GetAllPlugins</name>
+        <script><![CDATA[var GetAllPlugins = Class.create();
+GetAllPlugins.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    getAllPlugins: function() {
+        var allPlugins = "";
+        try {
+            allPlugins = SNC.UAAppInfo.getAllPluginInfo();
+        } catch (e) {
+            gs.info(e, "Plugin list access attempted by a non admin user");
+            allPlugins = "[]";
+        }
+        var encodedResponse = new global.JSON().decode(allPlugins);
+        var plugins = [];
+        encodedResponse.forEach(function(plugin) {
+            if (plugin.scope.toLowerCase().startsWith("x_"))
+                return;
+            plugin.isPlugin = true;
+            plugin.name = plugin.app_name;
+            plugin.id = plugin.app_id;
+            plugin.isInstalled = plugin.active == 0 ? false : true;
+            plugin.free = plugin.for_fee == 0;
+            plugin.paid = plugin.for_fee == 1;
+            plugin["all_lobs"] = [plugin.lob_id];
+            plugin.isOutOfBandApp = (plugin.scope.toLowerCase().startsWith("sn_") && plugin.id.toLowerCase() == plugin.scope.toLowerCase()) ? true : false;
+
+            plugin.is_customized_app = sn_app_customization.AppCustomizationAPI.isInactivePluginCustomizedApp(plugin.id);
+            if (plugin.is_customized_app)
+                plugin.can_install_or_upgrade_customization = true;
+
+            plugin.can_edit_in_studio = false;
+            plugin.can_open_in_studio = false;
+            if (plugin.active === "1" && plugin.scope !== "global") {
+                var storeAppGR = new GlideRecord("sys_store_app");
+                storeAppGR.addQuery("scope", plugin.scope);
+                storeAppGR.setLimit(1);
+                storeAppGR.query();
+                if (storeAppGR.next()) {
+                    var isCustomizationSupported = sn_app_customization.AppCustomizationAPI.isAppCustomizationCapableByScopeName(plugin.scope);
+                    var canEditInStudio = storeAppGR.can_edit_in_studio == true ? true : false;
+                    plugin.can_edit_in_studio = canEditInStudio && isCustomizationSupported;
+                    plugin.can_open_in_studio = !canEditInStudio && isCustomizationSupported;
+                    plugin.store_app_sys_id = storeAppGR.getUniqueValue();
+                    if (plugin.is_customized_app)
+                        plugin.can_install_or_upgrade_customization = sn_app_customization.AppCustomizationAPI
+                        .canInstallOrRepairCustomization(plugin.store_app_sys_id);
+                }
+            }
+
+            plugin.customized_version_info = sn_app_customization.AppCustomizationAPI.getInactivePluginCustomizationVersionInfo(plugin.id);
+            plugin.indicators = this.generateIndicatorObjectList(plugin.indicators);
+            plugin.entitled = plugin.license_check_required == 1 ? plugin.entitled : "not_applicable";
+
+            plugins.push(plugin);
+        });
+
+        return JSON.stringify(plugins);
+    },
+
+    generateIndicatorObjectList: function(indicatorKeys) {
+        var indicatorKeyMessageMap = {
+            "unsupported_environment": gs.getMessage("Unsupported Environment"),
+        };
+
+        var indicatorObjList = [];
+        var parsedKeys = JSON.parse(indicatorKeys || '[]');
+        parsedKeys.forEach(function(key, index) {
+            indicatorObjList[index] = {
+                id: key,
+                message: indicatorKeyMessageMap[key]
+            };
+        });
+
+        return indicatorObjList;
+    },
+    type: 'GetAllPlugins'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-28 17:19:22</sys_created_on>
+        <sys_id>c33c329c2f891110916d50492799b6ac</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>GetAllPlugins</sys_name>
+        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_update_name>sys_script_include_c33c329c2f891110916d50492799b6ac</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-28 17:46:13</sys_updated_on>
+    </sys_script_include>
+</record_update>
