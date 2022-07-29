@@ -17,6 +17,7 @@ GetAllPlugins.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
             gs.info(e, "Plugin list access attempted by a non admin user");
             allPlugins = "[]";
         }
+        var instanceName = this.getInstanceName();
         var encodedResponse = new global.JSON().decode(allPlugins);
         var plugins = [];
         encodedResponse.forEach(function(plugin) {
@@ -54,14 +55,44 @@ GetAllPlugins.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
                 }
             }
 
+            if (plugin.active === "1") {
+                var packageRec = new GlideRecord("sys_package");
+                if (plugin.scope !== "global")
+                    packageRec.addQuery("source", plugin.id).addOrCondition('source', plugin.scope);
+                else
+                    packageRec.addQuery("source", plugin.id);
+				packageRec.setLimit(2);
+                packageRec.query();
+                while (packageRec.next()) {
+                    if (packageRec.sys_class_name == 'sys_plugins')
+                        plugin.package_sys_id = packageRec.getValue('sys_id');
+                    if (packageRec.sys_class_name == 'sys_scope')
+                        plugin.scope_sys_id = packageRec.getValue('sys_id');
+                }
+            }
+
+            if (plugin.active === "0") {
+                var vplugins = new GlideRecord('v_plugin');
+                vplugins.addQuery('id', plugin.id);
+                vplugins.setLimit(1);
+                vplugins.query();
+                if (vplugins.next()) {
+                    plugin.vplugin_sys_id = vplugins.sys_id;
+                }
+            }
+
             plugin.customized_version_info = sn_app_customization.AppCustomizationAPI.getInactivePluginCustomizationVersionInfo(plugin.id);
             plugin.indicators = this.generateIndicatorObjectList(plugin.indicators);
             plugin.entitled = plugin.license_check_required == 1 ? plugin.entitled : "not_applicable";
-
+            plugin.instance_name = instanceName;
             plugins.push(plugin);
         });
 
         return JSON.stringify(plugins);
+    },
+
+    getInstanceName: function() {
+        return gs.getProperty('instance_name');
     },
 
     generateIndicatorObjectList: function(indicatorKeys) {
@@ -86,13 +117,13 @@ GetAllPlugins.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-28 17:19:22</sys_created_on>
         <sys_id>c33c329c2f891110916d50492799b6ac</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>GetAllPlugins</sys_name>
         <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name>sys_script_include_c33c329c2f891110916d50492799b6ac</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-28 17:46:13</sys_updated_on>
+        <sys_updated_on>2022-07-29 15:48:08</sys_updated_on>
     </sys_script_include>
 </record_update>
