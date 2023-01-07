@@ -1,49 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>general</category>
-        <client_script><![CDATA[gel('response').innerHTML = 'Loading...';
-var ga = new GlideAjax('GetAllPlugins');
-ga.addParam('sysparm_name', 'getAllPlugins');
-ga.getXML(callBack);
+        <client_script><![CDATA[try {
+    gel('response').innerHTML = 'Loading...';
+    var ga = new GlideAjax('GetAllPlugins');
+    ga.addParam('sysparm_name', 'getAllPlugins');
+    ga.getXML(callBack);
 
-function callBack(response) {
-    var answer = response.responseXML.documentElement.getAttribute("answer");
-    var plugins = JSON.parse(answer);
-    var lobList = document.createElement("ul");
-    var lobs = groupByLob(plugins);
-    for (var lob in lobs) {
-        var lobItem = document.createElement("li");
-        lobItem.innerText = lob;
-        var apps = lobs[lob];
-        var appList = document.createElement("ul");
-        apps.forEach(function(app) {
-            var appItem = document.createElement("li");
-            var packageSysID = app.package_sys_id;
-            var scopeSysID = app.scope_sys_id;
-            if (app.active == '1' && (packageSysID || scopeSysID)) {
-                var appLink = document.createElement("a");
-				var sysID = scopeSysID ? scopeSysID : packageSysID;
-                appLink.href = "https://" + app.instance_name + ".service-now.com/sys_package.do?sys_id=" + sysID;
-                appLink.innerText = app.app_name;
-                appItem.appendChild(appLink);
-            } else {
-                appItem.innerText = app.name;
+    function callBack(response) {
+        try {
+            var answer = response.responseXML.documentElement.getAttribute("answer");
+            var plugins = JSON.parse(answer);
+            var lobList = document.createElement("ul");
+            var lobs = groupByLob(plugins);
+            for (var lob in lobs) {
+                var lobItem = document.createElement("li");
+                lobItem.innerText = lob;
+                var apps = lobs[lob];
+                var appList = document.createElement("ul");
+                apps.forEach(function(app) {
+                    var appItem = document.createElement("li");
+                    var packageSysID = app.package_sys_id;
+                    var scopeSysID = app.scope_sys_id;
+                    if (app.active == '1' && (packageSysID || scopeSysID)) {
+                        var appLink = document.createElement("a");
+                        var sysID = scopeSysID ? scopeSysID : packageSysID;
+                        appLink.href = "https://" + app.instance_name + ".service-now.com/sys_package.do?sys_id=" + sysID;
+                        appLink.innerText = app.app_name;
+                        appItem.appendChild(appLink);
+                    } else {
+                        appItem.innerText = app.name;
+                    }
+                    appList.appendChild(appItem);
+                });
+                lobItem.appendChild(appList);
+                lobList.appendChild(lobItem);
             }
-            appList.appendChild(appItem);
-        });
-        lobItem.appendChild(appList);
-        lobList.appendChild(lobItem);
-    }
-    gel('response').innerHTML = '';
-    gel('response').appendChild(lobList);
-}
+            gel('response').innerHTML = '';
+            gel('response').appendChild(lobList);
+        } catch (ex) {
+            var message = 'An exception occured while parsing data. Please contact system administrator. Exception: ' + ex;
+            gel('response').innerHTML = message;
+        }
 
-function groupByLob(plugins) {
-    return plugins.reduce(function(r, a) {
-        r[a.lob_name] = r[a.lob_name] || [];
-        r[a.lob_name].push(a);
-        return r;
-    }, Object.create(null));
+    }
+
+
+    function groupByLob(plugins) {
+        return plugins.reduce(function(r, a) {
+            r[a.lob_name] = r[a.lob_name] || [];
+            r[a.lob_name].push(a);
+            return r;
+        }, Object.create(null));
+    }
+} catch (ex) {
+    var message = 'An exception occured while fecthing data. Please contact system administrator. Exception: ' + ex;
+    gel('response').innerHTML = message;
 }]]></client_script>
         <description/>
         <direct>false</direct>
@@ -58,13 +70,13 @@ function groupByLob(plugins) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-28 17:24:00</sys_created_on>
         <sys_id>f0acf69c2f891110916d50492799b650</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_name>plugin_explorer</sys_name>
         <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name>sys_ui_page_f0acf69c2f891110916d50492799b650</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-29 15:53:21</sys_updated_on>
+        <sys_updated_on>2023-01-07 08:30:05</sys_updated_on>
     </sys_ui_page>
 </record_update>
