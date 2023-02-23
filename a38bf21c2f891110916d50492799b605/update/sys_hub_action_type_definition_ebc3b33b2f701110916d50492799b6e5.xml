@@ -19,6 +19,7 @@
         <natlang/>
         <outputs/>
         <outputs/>
+        <pre_compiled>false</pre_compiled>
         <state>published</state>
         <sys_class_name>sys_hub_action_type_definition</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -26,15 +27,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ebc3b33b2f701110916d50492799b6e5</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Get Application Artifacts</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Table configuration" source="9c555b512f941110916d50492799b6fa">9c555b512f941110916d50492799b6fa</sys_package>
+        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_ebc3b33b2f701110916d50492799b6e5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-01-07 07:32:44</sys_updated_on>
+        <sys_updated_on>2023-02-23 17:18:48</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -48,10 +49,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 08:08:12</sys_created_on>
         <sys_id>89d4bf3f2f701110916d50492799b658</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 08:19:58</sys_updated_on>
-        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDb0d4bf3f037011100bbd08288165b246":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDb0d4bf3f037011100bbd08288165b246.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1538d4ed-6f30-4088-b4f0-0aed5a7f658e\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDb0d4bf3f037011100bbd08288165b246\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <sys_updated_on>2023-02-23 16:55:15</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDaae4500cbb19a110a2e2550e0857a194":{},"FlowDesigner:FDaae4500cbb19a110a2e2550e0857a194.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1538d4ed-6f30-4088-b4f0-0aed5a7f658e\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDaae4500cbb19a110a2e2550e0857a194\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON","complexObject":{}}</value>
         <variable display_value="Action Status">38d4bf3f2f701110916d50492799b649</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -151,10 +152,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 08:08:10</sys_created_on>
         <sys_id>20d4bf3f2f701110916d50492799b610</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:25:56</sys_updated_on>
+        <sys_updated_on>2023-02-23 16:55:14</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=20d4bf3f2f701110916d50492799b610"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -202,15 +203,29 @@
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
         <document_key>20d4bf3f2f701110916d50492799b610</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 16:55:14</sys_created_on>
+        <sys_id>52e4500c1b19a110099d8774cc4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 16:55:14</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Honor Duplicate Headers">15288f755bd24110ab933520b881c713</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>20d4bf3f2f701110916d50492799b610</document_key>
         <order>15</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 08:08:11</sys_created_on>
         <sys_id>70d4bf3f2f701110916d50492799b642</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 08:26:43</sys_updated_on>
-        <value>https://dev88983.service-now.com</value>
+        <sys_updated_on>2023-02-23 16:55:14</sys_updated_on>
+        <value>https://dev139167.service-now.com</value>
         <variable display_value="Base URL">a67a8ef03b23320057a4a2e334efc472</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -412,6 +427,18 @@
         <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>honor_duplicate_headers</field>
+        <id>20d4bf3f2f701110916d50492799b610</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 16:55:14</sys_created_on>
+        <sys_id>1ae4500c1b19a110099d8774cc4bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 16:55:14</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>honor_duplicate_query_params</field>
         <id>20d4bf3f2f701110916d50492799b610</id>
         <sys_created_by>admin</sys_created_by>
@@ -504,6 +531,7 @@
         <element>sn_auth_token</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -517,7 +545,7 @@
         <model_table>sys_hub_step_instance</model_table>
         <name>var__m_sys_hub_step_ext_output_20d4bf3f2f701110916d50492799b610</name>
         <next_element/>
-        <order>7</order>
+        <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
@@ -535,14 +563,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 08:25:04</sys_created_on>
         <sys_id>dcb8b7732fb01110916d50492799b679</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 08:26:43</sys_updated_on>
+        <sys_updated_on>2023-02-23 16:55:13</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -550,6 +578,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -569,11 +598,11 @@
         <sys_created_on>2022-07-27 08:25:04</sys_created_on>
         <sys_id>10b8b7732fb01110916d50492799b67e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Credential Value</sys_name>
-        <sys_package display_value="Table configuration" source="9c555b512f941110916d50492799b6fa">9c555b512f941110916d50492799b6fa</sys_package>
+        <sys_name/>
+        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_20d4bf3f2f701110916d50492799b610_sn_auth_token_en</sys_update_name>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 08:25:04</sys_updated_on>
         <url/>
@@ -596,10 +625,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:17</sys_created_on>
         <sys_id>e385c48c2f811110916d50492799b63d</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:21:18</sys_updated_on>
+        <sys_updated_on>2023-02-23 17:18:43</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e385c48c2f811110916d50492799b63d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -610,12 +639,12 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:18</sys_created_on>
         <sys_id>b385c48c2f811110916d50492799b66d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:21:18</sys_updated_on>
+        <sys_updated_on>2023-02-23 17:18:43</sys_updated_on>
         <value>(function execute(inputs, outputs) {
-	outputs.response = JSON.parse(inputs.response);
-    
+	var response = JSON.parse(inputs.response);
+  	outputs.response = new global.GetAppArtifacts().preprocess(response.artifacts);
   
 })(inputs, outputs);
 </value>
@@ -647,6 +676,18 @@
         <sys_updated_on>2022-07-27 09:21:18</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_e385c48c2f811110916d50492799b63d</table>
         <value>{{step[e21113a2-6121-4811-97ed-501a33ed8dc7].response_body}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>e385c48c2f811110916d50492799b63d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 16:55:14</sys_created_on>
+        <sys_id>62e4500c1b19a110099d8774cc4bcb92</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 16:55:14</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_e385c48c2f811110916d50492799b63d^id=e385c48c2f811110916d50492799b63d"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=e385c48c2f811110916d50492799b63d"/>
@@ -682,6 +723,7 @@
         <element>response</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -713,14 +755,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:17</sys_created_on>
         <sys_id>6b85c48c2f811110916d50492799b644</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:21:17</sys_updated_on>
+        <sys_updated_on>2023-02-23 16:55:14</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -728,6 +770,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -764,6 +807,7 @@
         <element>response</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -795,14 +839,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:17</sys_created_on>
         <sys_id>bf85c48c2f811110916d50492799b663</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:21:17</sys_updated_on>
+        <sys_updated_on>2023-02-23 16:55:14</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -810,6 +854,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -829,11 +874,11 @@
         <sys_created_on>2022-07-27 09:21:18</sys_created_on>
         <sys_id>7f85c48c2f811110916d50492799b667</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Response</sys_name>
-        <sys_package display_value="Table configuration" source="9c555b512f941110916d50492799b6fa">9c555b512f941110916d50492799b6fa</sys_package>
+        <sys_name/>
+        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_e385c48c2f811110916d50492799b63d_response_en</sys_update_name>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 09:21:18</sys_updated_on>
         <url/>
@@ -871,6 +916,7 @@
         <element>app_id</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -902,14 +948,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 08:04:02</sys_created_on>
         <sys_id>48e33ffb2f701110916d50492799b646</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 08:04:02</sys_updated_on>
+        <sys_updated_on>2023-02-23 16:55:12</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -917,6 +963,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -955,6 +1002,7 @@
         <element_prototype/>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -987,14 +1035,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 08:08:11</sys_created_on>
         <sys_id>34d4bf3f2f701110916d50492799b64f</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 08:08:12</sys_updated_on>
+        <sys_updated_on>2023-02-23 16:55:15</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1002,6 +1050,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -1040,6 +1089,7 @@
         <element_prototype/>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -1072,14 +1122,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:18</sys_created_on>
         <sys_id>3785c48c2f811110916d50492799b6a5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:21:18</sys_updated_on>
+        <sys_updated_on>2023-02-23 16:55:15</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1087,6 +1137,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -1097,7 +1148,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>action_error_output=true,co_type_name=FDb0d4bf3f037011100bbd08288165b246,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=1538d4ed-6f30-4088-b4f0-0aed5a7f658e</attributes>
+        <attributes>action_error_output=true,co_type_name=FDaae4500cbb19a110a2e2550e0857a194,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=1538d4ed-6f30-4088-b4f0-0aed5a7f658e</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -1125,6 +1176,7 @@
         <element_prototype/>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -1157,14 +1209,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 08:08:11</sys_created_on>
         <sys_id>38d4bf3f2f701110916d50492799b649</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 08:08:11</sys_updated_on>
+        <sys_updated_on>2023-02-23 16:55:15</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1172,6 +1224,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -1204,11 +1257,11 @@
         <sys_created_on>2022-07-27 08:04:03</sys_created_on>
         <sys_id>14e37ffb2f701110916d50492799b6aa</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>App ID</sys_name>
-        <sys_package display_value="Table configuration" source="9c555b512f941110916d50492799b6fa">9c555b512f941110916d50492799b6fa</sys_package>
+        <sys_name/>
+        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_ebc3b33b2f701110916d50492799b6e5_app_id_en</sys_update_name>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 08:04:03</sys_updated_on>
         <url/>
@@ -1229,11 +1282,11 @@
         <sys_created_on>2022-07-27 08:08:12</sys_created_on>
         <sys_id>49d4bf3f2f701110916d50492799b655</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Don't Treat as Error</sys_name>
-        <sys_package display_value="Table configuration" source="9c555b512f941110916d50492799b6fa">9c555b512f941110916d50492799b6fa</sys_package>
+        <sys_name/>
+        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_ebc3b33b2f701110916d50492799b6e5___dont_treat_as_error___en</sys_update_name>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 08:08:12</sys_updated_on>
         <url/>
@@ -1252,11 +1305,11 @@
         <sys_created_on>2022-07-27 08:08:11</sys_created_on>
         <sys_id>74d4bf3f2f701110916d50492799b64e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Action Status</sys_name>
-        <sys_package display_value="Table configuration" source="9c555b512f941110916d50492799b6fa">9c555b512f941110916d50492799b6fa</sys_package>
+        <sys_name/>
+        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_ebc3b33b2f701110916d50492799b6e5___action_status___en</sys_update_name>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 08:08:11</sys_updated_on>
         <url/>
@@ -1275,11 +1328,11 @@
         <sys_created_on>2022-07-27 09:21:18</sys_created_on>
         <sys_id>b785c48c2f811110916d50492799b6a9</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Response</sys_name>
-        <sys_package display_value="Table configuration" source="9c555b512f941110916d50492799b6fa">9c555b512f941110916d50492799b6fa</sys_package>
+        <sys_name/>
+        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_ebc3b33b2f701110916d50492799b6e5_response_en</sys_update_name>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 09:21:18</sys_updated_on>
         <url/>
@@ -1290,17 +1343,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Get Application Artifacts">ebc3b33b2f701110916d50492799b6e5</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"14a5888c2f811110916d50492799b698","name":"plan","plan_signature":null}}</plan>
-        <snapshot>179b6fec2f9425103df358492799b610</snapshot>
+        <snapshot>e74ad0801b59a110099d8774cc4bcb54</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:36</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>14a5888c2f811110916d50492799b698</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:26:12</sys_updated_on>
+        <sys_updated_on>2023-02-23 17:18:53</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1327,15 +1380,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3e95488c2f811110916d50492799b61f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:21:30</sys_updated_on>
+        <sys_updated_on>2023-02-23 17:16:25</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1349,10 +1402,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:32</sys_created_on>
         <sys_id>1f95488c2f811110916d50492799b683</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:21:32</sys_updated_on>
-        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FD0395488c9a81111003643814ba038c61":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FD0395488c9a81111003643814ba038c61.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1538d4ed-6f30-4088-b4f0-0aed5a7f658e\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD0395488c9a81111003643814ba038c61\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <sys_updated_on>2023-02-23 17:16:27</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FD1dc91840c859a1108dd8216e6e46b888":{},"FlowDesigner:FD1dc91840c859a1108dd8216e6e46b888.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1538d4ed-6f30-4088-b4f0-0aed5a7f658e\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD1dc91840c859a1108dd8216e6e46b888\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON","complexObject":{}}</value>
         <variable display_value="Action Status">4795488c2f811110916d50492799b664</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1424,10 +1477,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:31</sys_created_on>
         <sys_id>8b95488c2f811110916d50492799b64e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:21:31</sys_updated_on>
+        <sys_updated_on>2023-02-23 17:18:47</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=8b95488c2f811110916d50492799b64e"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1438,12 +1491,12 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:31</sys_created_on>
         <sys_id>4395488c2f811110916d50492799b65e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:21:31</sys_updated_on>
+        <sys_updated_on>2023-02-23 17:18:47</sys_updated_on>
         <value>(function execute(inputs, outputs) {
-	outputs.response = JSON.parse(inputs.response);
-    
+	var response = JSON.parse(inputs.response);
+  	outputs.response = new global.GetAppArtifacts().preprocess(response.artifacts);
   
 })(inputs, outputs);
 </value>
@@ -1475,6 +1528,18 @@
         <sys_updated_on>2022-07-27 09:21:31</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_8b95488c2f811110916d50492799b64e</table>
         <value>{{step[e21113a2-6121-4811-97ed-501a33ed8dc7].response_body}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>8b95488c2f811110916d50492799b64e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 17:16:27</sys_created_on>
+        <sys_id>81c918401b59a110099d8774cc4bcb86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 17:16:27</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_8b95488c2f811110916d50492799b64e^id=8b95488c2f811110916d50492799b64e"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=8b95488c2f811110916d50492799b64e"/>
@@ -1510,6 +1575,7 @@
         <element>response</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -1541,14 +1607,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:31</sys_created_on>
         <sys_id>4f95488c2f811110916d50492799b651</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:21:31</sys_updated_on>
+        <sys_updated_on>2023-02-23 17:16:26</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1556,6 +1622,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -1592,6 +1659,7 @@
         <element>response</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -1623,14 +1691,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:31</sys_created_on>
         <sys_id>0f95488c2f811110916d50492799b656</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:21:31</sys_updated_on>
+        <sys_updated_on>2023-02-23 17:16:27</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1638,6 +1706,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -1657,11 +1726,11 @@
         <sys_created_on>2022-07-27 09:21:31</sys_created_on>
         <sys_id>0795488c2f811110916d50492799b65a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Response</sys_name>
-        <sys_package display_value="Table configuration" source="9c555b512f941110916d50492799b6fa">9c555b512f941110916d50492799b6fa</sys_package>
+        <sys_name/>
+        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_8b95488c2f811110916d50492799b64e_response_en</sys_update_name>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 09:21:31</sys_updated_on>
         <url/>
@@ -1684,10 +1753,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:30</sys_created_on>
         <sys_id>fa95488c2f811110916d50492799b629</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:26:07</sys_updated_on>
+        <sys_updated_on>2023-02-23 17:16:26</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=fa95488c2f811110916d50492799b629"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1805,6 +1874,20 @@
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
         <document_key>fa95488c2f811110916d50492799b629</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 17:16:26</sys_created_on>
+        <sys_id>89c918401b59a110099d8774cc4bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 17:16:26</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Honor Duplicate Headers">15288f755bd24110ab933520b881c713</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fa95488c2f811110916d50492799b629</document_key>
         <order>10</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -1824,10 +1907,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:31</sys_created_on>
         <sys_id>cf95488c2f811110916d50492799b649</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:21:31</sys_updated_on>
-        <value>https://dev88983.service-now.com</value>
+        <sys_updated_on>2023-02-23 17:16:26</sys_updated_on>
+        <value>https://dev139167.service-now.com</value>
         <variable display_value="Base URL">a67a8ef03b23320057a4a2e334efc472</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_fa95488c2f811110916d50492799b629^id=fa95488c2f811110916d50492799b629"/>
@@ -1901,6 +1984,18 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 09:21:31</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>honor_duplicate_headers</field>
+        <id>fa95488c2f811110916d50492799b629</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 17:16:26</sys_created_on>
+        <sys_id>81c918401b59a110099d8774cc4bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 17:16:26</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value/>
     </sys_element_mapping>
@@ -1985,6 +2080,7 @@
         <element>sn_auth_token</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -1998,7 +2094,7 @@
         <model_table>sys_hub_step_instance</model_table>
         <name>var__m_sys_hub_step_ext_output_fa95488c2f811110916d50492799b629</name>
         <next_element/>
-        <order>7</order>
+        <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
@@ -2016,14 +2112,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:30</sys_created_on>
         <sys_id>fe95488c2f811110916d50492799b63c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:21:30</sys_updated_on>
+        <sys_updated_on>2023-02-23 17:16:26</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2031,6 +2127,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -2050,11 +2147,11 @@
         <sys_created_on>2022-07-27 09:21:30</sys_created_on>
         <sys_id>7a95488c2f811110916d50492799b640</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Credential Value</sys_name>
-        <sys_package display_value="Table configuration" source="9c555b512f941110916d50492799b6fa">9c555b512f941110916d50492799b6fa</sys_package>
+        <sys_name/>
+        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_fa95488c2f811110916d50492799b629_sn_auth_token_en</sys_update_name>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 09:21:30</sys_updated_on>
         <url/>
@@ -2092,6 +2189,7 @@
         <element>app_id</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -2123,14 +2221,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:30</sys_created_on>
         <sys_id>7695488c2f811110916d50492799b623</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:21:30</sys_updated_on>
+        <sys_updated_on>2023-02-23 17:16:25</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2138,6 +2236,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -2148,7 +2247,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>action_error_output=true,co_type_name=FD0395488c9a81111003643814ba038c61,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=1538d4ed-6f30-4088-b4f0-0aed5a7f658e</attributes>
+        <attributes>action_error_output=true,co_type_name=FD1dc91840c859a1108dd8216e6e46b888,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=1538d4ed-6f30-4088-b4f0-0aed5a7f658e</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -2176,6 +2275,7 @@
         <element_prototype/>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -2208,14 +2308,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:31</sys_created_on>
         <sys_id>4795488c2f811110916d50492799b664</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:21:31</sys_updated_on>
+        <sys_updated_on>2023-02-23 17:16:27</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2223,6 +2323,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -2261,6 +2362,7 @@
         <element_prototype/>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -2293,14 +2395,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:32</sys_created_on>
         <sys_id>5f95488c2f811110916d50492799b67c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:21:32</sys_updated_on>
+        <sys_updated_on>2023-02-23 17:16:27</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2308,6 +2410,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -2346,6 +2449,7 @@
         <element_prototype/>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -2378,14 +2482,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:32</sys_created_on>
         <sys_id>9795488c2f811110916d50492799b669</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-07-27 09:21:32</sys_updated_on>
+        <sys_updated_on>2023-02-23 17:16:27</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2393,6 +2497,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -2425,11 +2530,11 @@
         <sys_created_on>2022-07-27 09:21:30</sys_created_on>
         <sys_id>be95488c2f811110916d50492799b627</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>App ID</sys_name>
-        <sys_package display_value="Table configuration" source="9c555b512f941110916d50492799b6fa">9c555b512f941110916d50492799b6fa</sys_package>
+        <sys_name/>
+        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_3e95488c2f811110916d50492799b61f_app_id_en</sys_update_name>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 09:21:30</sys_updated_on>
         <url/>
@@ -2450,11 +2555,11 @@
         <sys_created_on>2022-07-27 09:21:32</sys_created_on>
         <sys_id>5795488c2f811110916d50492799b680</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Response</sys_name>
-        <sys_package display_value="Table configuration" source="9c555b512f941110916d50492799b6fa">9c555b512f941110916d50492799b6fa</sys_package>
+        <sys_name/>
+        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_3e95488c2f811110916d50492799b61f_response_en</sys_update_name>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 09:21:32</sys_updated_on>
         <url/>
@@ -2473,11 +2578,11 @@
         <sys_created_on>2022-07-27 09:21:32</sys_created_on>
         <sys_id>9f95488c2f811110916d50492799b67b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Don't Treat as Error</sys_name>
-        <sys_package display_value="Table configuration" source="9c555b512f941110916d50492799b6fa">9c555b512f941110916d50492799b6fa</sys_package>
+        <sys_name/>
+        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_3e95488c2f811110916d50492799b61f___dont_treat_as_error___en</sys_update_name>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 09:21:32</sys_updated_on>
         <url/>
@@ -2496,11 +2601,11 @@
         <sys_created_on>2022-07-27 09:21:32</sys_created_on>
         <sys_id>d795488c2f811110916d50492799b668</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Action Status</sys_name>
-        <sys_package display_value="Table configuration" source="9c555b512f941110916d50492799b6fa">9c555b512f941110916d50492799b6fa</sys_package>
+        <sys_name/>
+        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Table configuration">9c555b512f941110916d50492799b6fa</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_3e95488c2f811110916d50492799b61f___action_status___en</sys_update_name>
+        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 09:21:32</sys_updated_on>
         <url/>
@@ -2510,6 +2615,6 @@
     <sys_hub_action_type_definition action="UPDATE">
         <sys_id>ebc3b33b2f701110916d50492799b6e5</sys_id>
         <latest_snapshot>3e95488c2f811110916d50492799b61f</latest_snapshot>
-        <compiler_build>glide-sandiego-12-22-2021__patch7-08-17-2022_08-23-2022_1902.zip</compiler_build>
+        <compiler_build>glide-utah-12-21-2022__patch0-01-18-2023_01-18-2023_1907.zip</compiler_build>
     </sys_hub_action_type_definition>
 </record_update>
