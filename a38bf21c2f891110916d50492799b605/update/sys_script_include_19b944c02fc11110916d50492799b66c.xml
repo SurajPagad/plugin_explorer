@@ -19,7 +19,7 @@ GetAppArtifacts.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
             var response = outputs['response']; // JSON
             var resultObj = {};
             resultObj.artifacts = response.artifacts;
-			//preprocess(response.artifacts);
+            //preprocess(response.artifacts);
             resultObj.meta_data = response.metadata;
             resultObj.instance_name = gs.getProperty('instance_name');
             return JSON.stringify(resultObj);
@@ -31,63 +31,59 @@ GetAppArtifacts.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
 
     preprocess: function(artifacts) {
-        artifacts.forEach(function(artifact, artifactIndex) {
-            var artifactTypes = artifact.types ? artifact.types : [];
-            artifactTypes.forEach(function(artifactType, artifactTypeIndex) {
-                var metaDataFiles = artifactType.artifacts ? artifactType.artifacts : [];
-                metaDataFiles.forEach(function(metaDataFile, metaDataFileIndex) {
-//                     var customized = false;
-//                     var audit = new GlideRecord('sys_audit');
-//                     audit.addQuery('documentkey', metaDataFileSysId);
-//                     audit.setLimit(1);
-//                     audit.query();
-//                     if (audit.hasNext())
-//                         customized = true;
-//                     else
-//                         customized = false;
-                    //gs.info('customized ' + customized);
-					
-                    artifacts[artifactIndex].types[artifactTypeIndex].artifacts[metaDataFileIndex].isCustomized = this.isCustomizedArtifact(artifactType.id,metaDataFile.sysId);
-                    //metaDataFiles.isCustomized = this.isCustomizedArtifact(artifactType.id,metaDataFile.sysId);
-                });
+        var filtered = artifacts.filter(function(item) {
+            return item.types.some(function(type) {
+                return type.artifacts && type.artifacts.length > 0 ? true : false;
             });
         });
-		gs.info(JSON.stringify(artifacts));
-        return artifacts;
+
+        var processed = filtered.map(function(item) {
+            var res = item;
+            item.types.forEach(function(type, typeIdx) {
+                type.artifacts.forEach(function(artifact, artIdx) {
+                    var isCustom = false;
+                    if (this.isCustomizedArtifact(type.id, artifact.sysId))
+                        isCustom = true;
+                    res.types[typeIdx].artifacts[artIdx].isCustomized = isCustom;
+                });
+            });
+            return res;
+        });
+        return processed;
     },
 
-    isCustomizedArtifact: function(type,artifactID) {
-		if(!gs.nil(type))
-			type = this.getParameter('sysparm_type');
-		if(!gs.nil(artifactID))
-			artifactID = this.getParameter('sysparm_artifact_id');
-        if (!artifactID)
+    isCustomizedArtifact: function(type, artifactID) {
+        if (gs.nil(type))
+            type = this.getParameter('sysparm_type');
+        if (gs.nil(artifactID))
+            artifactID = this.getParameter('sysparm_artifact_id');
+        if (gs.nil(artifactID))
             return false;
         var grSUV = new GlideRecord('sys_update_version');
         grSUV.addEncodedQuery("state=current^name=" + type + '_' + artifactID);
         grSUV.query();
         if (grSUV.next()) {
-            if (grSUV.source_table == 'sys_update_set') {
-                return 'true';
-            }
+            if (grSUV.source_table == 'sys_update_set'){
+				gs.info('isCustomizedArtifact');
+                return true;
+			}
         }
-        return 'false';
+        return false;
     },
-
     type: 'GetAppArtifacts'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:41:30</sys_created_on>
         <sys_id>19b944c02fc11110916d50492799b66c</sys_id>
-        <sys_mod_count>47</sys_mod_count>
+        <sys_mod_count>58</sys_mod_count>
         <sys_name>GetAppArtifacts</sys_name>
         <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name>sys_script_include_19b944c02fc11110916d50492799b66c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-23 17:13:59</sys_updated_on>
+        <sys_updated_on>2023-02-24 07:11:14</sys_updated_on>
     </sys_script_include>
     <sys_claim action="INSERT_OR_UPDATE">
         <claim_owner_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</claim_owner_scope>

@@ -57,29 +57,6 @@ sampleApps.controller('mainCtrl', function($scope) {
         return '/sys_metadata.do?sys_id=' + artifactItem.sysId;
     };
 
-    $scope.isCustomized = function(typeID, artifactID) {
-        var result = false;
-        var ga = new GlideAjax('GetAppArtifacts');
-        ga.addParam('sysparm_name', 'isCustomizedArtifact');
-        ga.addParam('sysparm_type', typeID);
-        ga.addParam('sysparm_artifact_id', artifactID);
-        ga.getXMLWait();
-        result = ga.getAnswer();
-        // function callback(result) {
-        //var result = response.responseXML.documentElement.getAttribute("answer");
-        if (result == 'true')
-            return 'true';
-        return 'false';
-        // }
-
-    };
-
-    $scope.hasArtifacts = function(types) {
-        return types.some(function(type) {
-            return type.artifacts && type.artifacts.length > 0 ? true : false;
-        });
-    };
-
 });
 
 function setHiddenInput() {
@@ -100,11 +77,11 @@ function setHiddenInput() {
                         completer="AJAXTableCompleter" onchange="setHiddenInput()" columns="scope" />
                 </div>
                 <div class="col-sm-1">
-					<button ng-click="setMode()">Dark mode</button>
-				</div>
-				<div ng-if="artifacts.length > 0" class="col-sm-1">
-					<button ng-click="collapseAll()" title='Collapse All'>[-]</button>
-				</div>
+                    <button ng-click="setMode()">Dark mode</button>
+                </div>
+                <div ng-if="artifacts.length > 0" class="col-sm-1">
+                    <button ng-click="collapseAll()" title='Collapse All'>[-]</button>
+                </div>
             </div>
             <input type="HIDDEN" name="app_id_hidden" ng-model='app_id_hidden' id="app_id_hidden" />
             <div class="row">
@@ -114,29 +91,28 @@ function setHiddenInput() {
                     </div>
                     <ul ng-if="artifacts.length > 0 &amp;&amp; !loading" class="main-ul">
                         <li ng-repeat="artifact in artifacts" ng-init="artifactIndex = $index">
-                            <span ng-if="hasArtifacts(artifact.types)">
-                                <span data-toggle="collapse" data-target="#artifact{{artifactIndex}}"
-                                    ng-click="toggleIcon($event)" class="list-label"><i
-                                        class="icon-chevron-down rotate"></i>{{ artifact.name }}</span>
-                                <ul ng-if="artifact.types &amp;&amp; artifact.types.length > 0"
-                                    class="collapse in" id="artifact{{artifactIndex}}">
-                                    <li ng-repeat="type in artifact.types">
-                                        <span ng-if="type.artifacts &amp;&amp; type.artifacts.length > 0">
-                                            <span data-toggle="collapse"
-                                                data-target="#artifact{{artifactIndex}}_type{{$index}}"
-                                                ng-click="toggleIcon($event)" class="list-label"><i
-                                                    class="icon-chevron-down rotate"></i>{{ type.name }}</span>
-                                            <ul ng-if="type.artifacts.length > 0" class="collapse in"
-                                                id="artifact{{artifactIndex}}_type{{$index}}">
-                                                <li ng-repeat="artifactItem in type.artifacts">
-                                                    <span><a href='{{getlink(artifactItem)}}'
-															 target='_blank'>{{artifactItem.name}} ➚</a>{{artifactItem.isCustomized}} </span>
-                                                </li>
-                                            </ul>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </span>
+                            <span data-toggle="collapse" data-target="#artifact{{artifactIndex}}"
+                                ng-click="toggleIcon($event)" class="list-label"><i
+                                    class="icon-chevron-down rotate"></i>{{ artifact.name }}</span>
+                            <ul ng-if="artifact.types &amp;&amp; artifact.types.length > 0" class="collapse in"
+                                id="artifact{{artifactIndex}}">
+                                <li ng-repeat="type in artifact.types">
+                                    <span ng-if="type.artifacts &amp;&amp; type.artifacts.length > 0">
+                                        <span data-toggle="collapse"
+                                            data-target="#artifact{{artifactIndex}}_type{{$index}}"
+                                            ng-click="toggleIcon($event)" class="list-label"><i
+                                                class="icon-chevron-down rotate"></i>{{ type.name }}</span>
+                                        <ul ng-if="type.artifacts.length > 0" class="collapse in"
+                                            id="artifact{{artifactIndex}}_type{{$index}}">
+                                            <li ng-repeat="artifactItem in type.artifacts">
+                                                <span><a href='{{getlink(artifactItem)}}'
+                                                        target='_blank'>{{artifactItem.name}}
+                                                        ➚</a>{{artifactItem.isCustomized}} </span>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -156,10 +132,10 @@ function setHiddenInput() {
         i {
             margin-right: 5px
         }
-		
-		.dark-mode {
-			background-color: #121212;
-			color: #6002EE;
+
+        .dark-mode {
+            background-color: #121212;
+            color: #6002EE;
         }
     </style>
 </j:jelly>]]></html>
@@ -169,14 +145,14 @@ function setHiddenInput() {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-09 16:09:42</sys_created_on>
         <sys_id>388fd4902f191110916d50492799b6d9</sys_id>
-        <sys_mod_count>149</sys_mod_count>
+        <sys_mod_count>153</sys_mod_count>
         <sys_name>application_explorer_new</sys_name>
         <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
         <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name>sys_ui_page_388fd4902f191110916d50492799b6d9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-23 17:03:48</sys_updated_on>
+        <sys_updated_on>2023-02-24 06:53:23</sys_updated_on>
     </sys_ui_page>
     <sys_claim action="INSERT_OR_UPDATE">
         <claim_owner_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</claim_owner_scope>
