@@ -27,7 +27,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ebc3b33b2f701110916d50492799b6e5</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name>Get Application Artifacts</sys_name>
         <sys_overrides/>
         <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_ebc3b33b2f701110916d50492799b6e5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-24 06:48:27</sys_updated_on>
+        <sys_updated_on>2023-02-25 06:43:05</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -625,10 +625,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:17</sys_created_on>
         <sys_id>e385c48c2f811110916d50492799b63d</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-24 06:48:21</sys_updated_on>
+        <sys_updated_on>2023-02-25 06:43:02</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e385c48c2f811110916d50492799b63d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -639,14 +639,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:18</sys_created_on>
         <sys_id>b385c48c2f811110916d50492799b66d</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-24 06:48:21</sys_updated_on>
+        <sys_updated_on>2023-02-25 06:43:02</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 	var response = JSON.parse(inputs.response);
-   //gs.info(JSON.stringify(response));
   	outputs.response = {
-      'artifacts':new global.GetAppArtifacts().preprocess(response.artifacts),
+      'artifacts':new global.AppArtifactUtils().preprocess(response.artifacts),
       'metadata':response.metadata
     };
   
@@ -1347,17 +1346,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Get Application Artifacts">ebc3b33b2f701110916d50492799b6e5</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"14a5888c2f811110916d50492799b698","name":"plan","plan_signature":null}}</plan>
-        <snapshot>bb931b401b15e110099d8774cc4bcb1c</snapshot>
+        <snapshot>8bfb9ce81bd52510099d8774cc4bcb4f</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:36</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>14a5888c2f811110916d50492799b698</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-24 06:48:35</sys_updated_on>
+        <sys_updated_on>2023-02-25 06:43:08</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1481,10 +1480,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:31</sys_created_on>
         <sys_id>8b95488c2f811110916d50492799b64e</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-24 06:48:27</sys_updated_on>
+        <sys_updated_on>2023-02-25 06:43:05</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=8b95488c2f811110916d50492799b64e"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1495,14 +1494,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-27 09:21:31</sys_created_on>
         <sys_id>4395488c2f811110916d50492799b65e</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-24 06:48:27</sys_updated_on>
+        <sys_updated_on>2023-02-25 06:43:05</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 	var response = JSON.parse(inputs.response);
-   //gs.info(JSON.stringify(response));
   	outputs.response = {
-      'artifacts':new global.GetAppArtifacts().preprocess(response.artifacts),
+      'artifacts':new global.AppArtifactUtils().preprocess(response.artifacts),
       'metadata':response.metadata
     };
   
