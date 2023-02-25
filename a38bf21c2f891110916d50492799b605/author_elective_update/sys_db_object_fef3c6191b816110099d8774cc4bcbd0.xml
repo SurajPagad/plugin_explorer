@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="DELETE">
+        <access/>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <caller_access/>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>true</create_access>
+        <create_access_controls>false</create_access_controls>
+        <delete_access>true</delete_access>
+        <is_extendable>false</is_extendable>
+        <label>Interaction Skill</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>interaction_m2m_skill</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>true</read_access>
+        <scriptable_table>false</scriptable_table>
+        <super_class/>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-15 11:57:12</sys_created_on>
+        <sys_id>fef3c6191b816110099d8774cc4bcbd0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Interaction M2m Skill</sys_name>
+        <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_update_name>sys_db_object_fef3c6191b816110099d8774cc4bcbd0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-15 11:57:12</sys_updated_on>
+        <update_access>true</update_access>
+        <user_role/>
+        <ws_access>true</ws_access>
+    </sys_db_object>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</claim_owner_scope>
+        <claim_timestamp>1867f56eec80000001</claim_timestamp>
+        <metadata_update_name>sys_db_object_fef3c6191b816110099d8774cc4bcbd0</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Plugin Explorer</previous_claim_name>
+        <previous_claim_scope>a38bf21c2f891110916d50492799b605</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 17:34:09</sys_created_on>
+        <sys_id>5cdd58441b59a110099d8774cc4bcb56</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 17:34:09</sys_updated_on>
+    </sys_claim>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Application explorer">a38bf21c2f891110916d50492799b605</application>
+        <file_path/>
+        <instance_id>42015b1edb9a1d900288c5970596196d</instance_id>
+        <instance_name>dev139167</instance_name>
+        <name>sys_db_object_fef3c6191b816110099d8774cc4bcbd0</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object"><sys_db_object action="INSERT_OR_UPDATE"><access/><actions_access>false</actions_access><alter_access>false</alter_access><caller_access/><client_scripts_access>false</client_scripts_access><configuration_access>false</configuration_access><create_access>true</create_access><create_access_controls>false</create_access_controls><delete_access>true</delete_access><is_extendable>false</is_extendable><label>Interaction Skill</label><live_feed_enabled>false</live_feed_enabled><name>interaction_m2m_skill</name><number_ref/><provider_class/><read_access>true</read_access><scriptable_table>false</scriptable_table><super_class/><sys_class_name>sys_db_object</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-02-15 11:57:12</sys_created_on><sys_id>fef3c6191b816110099d8774cc4bcbd0</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Interaction M2m Skill</sys_name><sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package><sys_policy/><sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope><sys_update_name>sys_db_object_fef3c6191b816110099d8774cc4bcbd0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-02-15 11:57:12</sys_updated_on><update_access>true</update_access><user_role/><ws_access>true</ws_access></sys_db_object><sys_claim action="INSERT_OR_UPDATE"><claim_owner_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</claim_owner_scope><claim_timestamp>1867f56eec80000001</claim_timestamp><metadata_update_name>sys_db_object_fef3c6191b816110099d8774cc4bcbd0</metadata_update_name><previous_claim_app_version>1.0.0</previous_claim_app_version><previous_claim_name>Plugin Explorer</previous_claim_name><previous_claim_scope>a38bf21c2f891110916d50492799b605</previous_claim_scope><sys_created_by>admin</sys_created_by><sys_created_on>2023-02-23 17:34:09</sys_created_on><sys_id>5cdd58441b59a110099d8774cc4bcb56</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-02-23 17:34:09</sys_updated_on></sys_claim></record_update>]]></payload>
+        <payload_hash>1509713181</payload_hash>
+        <record_name>Interaction Skill</record_name>
+        <reverted_from/>
+        <source>1b0ad6131b202110099d8774cc4bcb48</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2023-01-27 22:10:05</sys_created_on>
+        <sys_id>cc5b68e81b192510099d8774cc4bcb25</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>185f547da480000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Table</type>
+        <update_guid>8c5b68e801192510f2585b2a13a6f925</update_guid>
+        <update_guid_history>8c5b68e801192510f2585b2a13a6f925:1509713181</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-25 07:52:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_db_object">sys_db_object</sys_db_object>
+        <sys_id>95ef9468cbbc4e6c9245efcfb37b7749</sys_id>
+        <sys_metadata>fef3c6191b816110099d8774cc4bcbd0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Interaction M2m Skill</sys_name>
+        <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope_delete display_value="">022621f759574b48a8bdf1581c5dd890</sys_scope_delete>
+        <sys_update_name>sys_db_object_fef3c6191b816110099d8774cc4bcbd0</sys_update_name>
+        <sys_update_version display_value="sys_db_object_fef3c6191b816110099d8774cc4bcbd0">cc5b68e81b192510099d8774cc4bcb25</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-25 07:52:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
