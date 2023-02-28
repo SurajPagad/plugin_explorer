@@ -14,9 +14,9 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_name>FD1dc91840c859a1108dd8216e6e46b888</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
+        <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name>sys_complex_object_ddc918401b59a110099d8774cc4bcb88</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-23 17:16:27</sys_updated_on>

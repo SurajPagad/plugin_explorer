@@ -10,7 +10,9 @@
     function callBack(response) {
         try {
             var answer = response.responseXML.documentElement.getAttribute("answer");
-            var plugins = JSON.parse(answer);
+            answer = JSON.parse(answer);
+			var plugins = answer.plugins;
+			var instanceName = answer.instanceName;
             var lobList = document.createElement("ul");
             var lobs = groupByLob(plugins);
             for (var lob in lobs) {
@@ -32,7 +34,7 @@
                             sysID = scopeSysID;
                         else
                             sysID = packageSysID;
-                        appLink.href = "https://" + app.instance_name + ".service-now.com/sys_package.do?sys_id=" + sysID;
+                        appLink.href = "https://" + instanceName + ".service-now.com/sys_package.do?sys_id=" + sysID;
                         appLink.target = '_blank';
                         appLink.innerText = app.app_name + ' ➚';
                         appItem.appendChild(appLink);
@@ -78,13 +80,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-28 17:24:00</sys_created_on>
         <sys_id>f0acf69c2f891110916d50492799b650</sys_id>
-        <sys_mod_count>47</sys_mod_count>
+        <sys_mod_count>48</sys_mod_count>
         <sys_name>plugin_explorer</sys_name>
-        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
+        <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name>sys_ui_page_f0acf69c2f891110916d50492799b650</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-01-07 16:21:26</sys_updated_on>
+        <sys_updated_on>2023-02-28 14:36:11</sys_updated_on>
     </sys_ui_page>
 </record_update>

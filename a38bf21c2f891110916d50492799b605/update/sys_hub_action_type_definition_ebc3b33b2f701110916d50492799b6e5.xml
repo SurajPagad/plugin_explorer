@@ -30,9 +30,9 @@
         <sys_mod_count>30</sys_mod_count>
         <sys_name>Get Application Artifacts</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
+        <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_ebc3b33b2f701110916d50492799b6e5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-25 06:43:05</sys_updated_on>
@@ -107,7 +107,7 @@
         <value/>
     </sys_element_mapping>
     <sys_claim action="INSERT_OR_UPDATE">
-        <claim_owner_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</claim_owner_scope>
+        <claim_owner_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</claim_owner_scope>
         <claim_timestamp>1858b25710c0000001</claim_timestamp>
         <metadata_update_name>sys_hub_action_type_definition_ebc3b33b2f701110916d50492799b6e5</metadata_update_name>
         <previous_claim_app_version>1.0.0</previous_claim_app_version>
@@ -121,7 +121,7 @@
         <sys_updated_on>2023-01-07 07:32:44</sys_updated_on>
     </sys_claim>
     <sys_claim action="INSERT_OR_UPDATE">
-        <claim_owner_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</claim_owner_scope>
+        <claim_owner_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</claim_owner_scope>
         <claim_timestamp>1858b2571030000001</claim_timestamp>
         <metadata_update_name>sys_hub_action_type_definition_ebc3b33b2f701110916d50492799b6e5</metadata_update_name>
         <previous_claim_app_version>1.0.0</previous_claim_app_version>
@@ -153,7 +153,7 @@
         <sys_created_on>2022-07-27 08:08:10</sys_created_on>
         <sys_id>20d4bf3f2f701110916d50492799b610</sys_id>
         <sys_mod_count>7</sys_mod_count>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-23 16:55:14</sys_updated_on>
     </sys_hub_step_instance>
@@ -567,7 +567,7 @@
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-23 16:55:13</sys_updated_on>
@@ -599,9 +599,9 @@
         <sys_id>10b8b7732fb01110916d50492799b67e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
-        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
+        <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 08:25:04</sys_updated_on>
@@ -626,7 +626,7 @@
         <sys_created_on>2022-07-27 09:21:17</sys_created_on>
         <sys_id>e385c48c2f811110916d50492799b63d</sys_id>
         <sys_mod_count>10</sys_mod_count>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-25 06:43:02</sys_updated_on>
     </sys_hub_step_instance>
@@ -762,7 +762,7 @@
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-23 16:55:14</sys_updated_on>
@@ -846,7 +846,7 @@
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-23 16:55:14</sys_updated_on>
@@ -878,9 +878,9 @@
         <sys_id>7f85c48c2f811110916d50492799b667</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
-        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
+        <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 09:21:18</sys_updated_on>
@@ -955,7 +955,7 @@
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-23 16:55:12</sys_updated_on>
@@ -1042,7 +1042,7 @@
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-23 16:55:15</sys_updated_on>
@@ -1129,7 +1129,7 @@
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-23 16:55:15</sys_updated_on>
@@ -1216,7 +1216,7 @@
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-23 16:55:15</sys_updated_on>
@@ -1261,9 +1261,9 @@
         <sys_id>14e37ffb2f701110916d50492799b6aa</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
-        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
+        <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 08:04:03</sys_updated_on>
@@ -1286,9 +1286,9 @@
         <sys_id>49d4bf3f2f701110916d50492799b655</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
-        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
+        <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 08:08:12</sys_updated_on>
@@ -1309,9 +1309,9 @@
         <sys_id>74d4bf3f2f701110916d50492799b64e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
-        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
+        <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 08:08:11</sys_updated_on>
@@ -1332,9 +1332,9 @@
         <sys_id>b785c48c2f811110916d50492799b6a9</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
-        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
+        <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 09:21:18</sys_updated_on>
@@ -1388,7 +1388,7 @@
         <sys_overrides/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-23 17:16:25</sys_updated_on>
@@ -1481,7 +1481,7 @@
         <sys_created_on>2022-07-27 09:21:31</sys_created_on>
         <sys_id>8b95488c2f811110916d50492799b64e</sys_id>
         <sys_mod_count>9</sys_mod_count>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-25 06:43:05</sys_updated_on>
     </sys_hub_step_instance>
@@ -1617,7 +1617,7 @@
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-23 17:16:26</sys_updated_on>
@@ -1701,7 +1701,7 @@
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-23 17:16:27</sys_updated_on>
@@ -1733,9 +1733,9 @@
         <sys_id>0795488c2f811110916d50492799b65a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
-        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
+        <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 09:21:31</sys_updated_on>
@@ -1760,7 +1760,7 @@
         <sys_created_on>2022-07-27 09:21:30</sys_created_on>
         <sys_id>fa95488c2f811110916d50492799b629</sys_id>
         <sys_mod_count>4</sys_mod_count>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-23 17:16:26</sys_updated_on>
     </sys_hub_step_instance>
@@ -2122,7 +2122,7 @@
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-23 17:16:26</sys_updated_on>
@@ -2154,9 +2154,9 @@
         <sys_id>7a95488c2f811110916d50492799b640</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
-        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
+        <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 09:21:30</sys_updated_on>
@@ -2231,7 +2231,7 @@
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-23 17:16:25</sys_updated_on>
@@ -2318,7 +2318,7 @@
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-23 17:16:27</sys_updated_on>
@@ -2405,7 +2405,7 @@
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-23 17:16:27</sys_updated_on>
@@ -2492,7 +2492,7 @@
         <sys_name/>
         <sys_package/>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-02-23 17:16:27</sys_updated_on>
@@ -2537,9 +2537,9 @@
         <sys_id>be95488c2f811110916d50492799b627</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
-        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
+        <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 09:21:30</sys_updated_on>
@@ -2562,9 +2562,9 @@
         <sys_id>5795488c2f811110916d50492799b680</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
-        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
+        <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 09:21:32</sys_updated_on>
@@ -2585,9 +2585,9 @@
         <sys_id>9f95488c2f811110916d50492799b67b</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
-        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
+        <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 09:21:32</sys_updated_on>
@@ -2608,9 +2608,9 @@
         <sys_id>d795488c2f811110916d50492799b668</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
-        <sys_package display_value="Plugin Explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
+        <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Plugin Explorer">a38bf21c2f891110916d50492799b605</sys_scope>
+        <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-07-27 09:21:32</sys_updated_on>
