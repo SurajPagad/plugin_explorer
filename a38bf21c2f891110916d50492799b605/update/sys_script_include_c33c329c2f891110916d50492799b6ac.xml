@@ -10,15 +10,54 @@
         <script><![CDATA[var GetAllPlugins = Class.create();
 GetAllPlugins.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
+    getPluginsAndApps: function() {
+        var response = {};
+        var instanceName = this.getInstanceName();
+        var plugins = new global.PluginsData().getPlugins();
+        var apps = this.getAllApps();
+        var result = plugins.concat(apps.data);
+        result = this.groupByLob(result);
+        response.instanceName = instanceName;
+        response.plugins = result;
+        return JSON.stringify(response);
+    },
+
     getAllPlugins: function() {
         var response = {};
         var instanceName = this.getInstanceName();
         var plugins = new global.PluginsData().getPlugins();
+        plugins = this.groupByLob(plugins);
         response.instanceName = instanceName;
         response.plugins = plugins;
         return JSON.stringify(response);
     },
 
+
+    groupByLob: function(plugins) {
+        return plugins.reduce(function(r, a) {
+            if (a.hasOwnProperty('lob_name')) {
+                r[a.lob_name] = r[a.lob_name] || [];
+                r[a.lob_name].push(a);
+            } else if (a.hasOwnProperty('lob') && a.lob.length > 0) {
+                var lobLabel = a.lob[0].lob_label;
+                r[lobLabel] = r[lobLabel] || [];
+                r[lobLabel].push(a);
+            } else if(a.hasOwnProperty('lob') && a.lob.length == 0){
+				r['Other'] = r['Other'] || [];
+                r['Other'].push(a);
+			}
+            return r;
+        }, Object.create(null));
+    },
+
+    getAllApps: function() {
+        var response = new sn_appclient.AppsDataWrapper().getAllAppsWithVersions();
+        return response;
+    },
+
+    getSessionID: function() {
+        return gs.getSessionToken();
+    },
 
     getInstanceName: function() {
         return gs.getProperty('instance_name');
@@ -30,13 +69,13 @@ GetAllPlugins.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-28 17:19:22</sys_created_on>
         <sys_id>c33c329c2f891110916d50492799b6ac</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_name>GetAllPlugins</sys_name>
         <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
         <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name>sys_script_include_c33c329c2f891110916d50492799b6ac</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-28 14:42:12</sys_updated_on>
+        <sys_updated_on>2023-03-29 10:32:13</sys_updated_on>
     </sys_script_include>
 </record_update>

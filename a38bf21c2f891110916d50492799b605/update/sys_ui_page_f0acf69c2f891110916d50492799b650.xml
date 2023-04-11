@@ -4,7 +4,7 @@
         <client_script><![CDATA[try {
     gel('response').innerHTML = 'Loading...';
     var ga = new GlideAjax('GetAllPlugins');
-    ga.addParam('sysparm_name', 'getAllPlugins');
+    ga.addParam('sysparm_name', 'getPluginsAndApps');
     ga.getXML(callBack);
 
     function callBack(response) {
@@ -14,20 +14,19 @@
 			var plugins = answer.plugins;
 			var instanceName = answer.instanceName;
             var lobList = document.createElement("ul");
-            var lobs = groupByLob(plugins);
-            for (var lob in lobs) {
+            for (var lob in plugins) {
                 var lobItem = document.createElement("li");
                 lobItem.innerText = lob;
-                var apps = lobs[lob];
+                var apps = plugins[lob];
                 var appList = document.createElement("ul");
                 apps.forEach(function(app) {
                     var appItem = document.createElement("li");
                     var packageSysID = app.package_sys_id;
                     var scopeSysID = app.scope_sys_id;
                     var storeAppSysID = app.store_app_sys_id;
-                    if (app.active == '1' && (storeAppSysID || scopeSysID || packageSysID)) {
+					var sysID = !isNaN(app.sys_id)?app.sys_id:'';
+                    if (app.active == '1' && (sysID || storeAppSysID || scopeSysID || packageSysID)) {
                         var appLink = document.createElement("a");
-                        var sysID;
                         if (storeAppSysID)
                             sysID = storeAppSysID;
                         else if (scopeSysID)
@@ -55,14 +54,6 @@
 
     }
 
-
-    function groupByLob(plugins) {
-        return plugins.reduce(function(r, a) {
-            r[a.lob_name] = r[a.lob_name] || [];
-            r[a.lob_name].push(a);
-            return r;
-        }, Object.create(null));
-    }
 } catch (ex) {
     var message = 'An exception occured while fecthing data. Please contact system administrator. Exception: ' + ex;
     gel('response').innerHTML = message;
@@ -80,13 +71,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-07-28 17:24:00</sys_created_on>
         <sys_id>f0acf69c2f891110916d50492799b650</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>55</sys_mod_count>
         <sys_name>plugin_explorer</sys_name>
         <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
         <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name>sys_ui_page_f0acf69c2f891110916d50492799b650</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-28 14:36:11</sys_updated_on>
+        <sys_updated_on>2023-03-29 10:16:29</sys_updated_on>
     </sys_ui_page>
 </record_update>
