@@ -41,6 +41,11 @@ sampleApps.controller('mainCtrl', function($scope) {
 
     $scope.setMode = function() {
         $j('body').toggleClass('dark-mode');
+        if ($scope.buttonLabel === 'Dark mode') {
+            $scope.buttonLabel = 'Light mode';
+        } else {
+            $scope.buttonLabel = 'Dark mode';
+        }
     };
 
     $scope.toggleIcon = function(event) {
@@ -75,7 +80,7 @@ function setHiddenInput() {
                         completer="AJAXTableCompleter" onchange="setHiddenInput()" columns="scope" />
                 </div>
                 <div class="col-sm-1">
-                    <button ng-click="setMode()">Dark mode</button>
+                    <button ng-click="setMode()" ng-init="buttonLabel='Dark mode'">{{buttonLabel}}</button>
                 </div>
                 <div ng-if="artifacts.length > 0" class="col-sm-1">
                     <button ng-click="collapseAll()" title='Collapse All'>[-]</button>
@@ -90,16 +95,14 @@ function setHiddenInput() {
                     <ul ng-if="artifacts.length > 0 &amp;&amp; !loading" class="main-ul">
                         <li ng-repeat="artifact in artifacts" ng-init="artifactIndex = $index">
                             <span data-toggle="collapse" data-target="#artifact{{artifactIndex}}"
-                                ng-click="toggleIcon($event)" class="list-label"><i
-                                    class="icon-chevron-down rotate"></i>{{ artifact.name }}</span>
+                                ng-click="toggleIcon($event)" class="list-label"><i class="icon-chevron-down rotate"></i><b>{{ artifact.name }}</b></span>
                             <ul ng-if="artifact.types &amp;&amp; artifact.types.length > 0" class="collapse in"
                                 id="artifact{{artifactIndex}}">
                                 <li ng-repeat="type in artifact.types">
                                     <span ng-if="type.artifacts &amp;&amp; type.artifacts.length > 0">
                                         <span data-toggle="collapse"
                                             data-target="#artifact{{artifactIndex}}_type{{$index}}"
-                                            ng-click="toggleIcon($event)" class="list-label"><i
-                                                class="icon-chevron-down rotate"></i>{{ type.name }}</span>
+                                            ng-click="toggleIcon($event)" class="list-label"><i class="icon-chevron-down rotate"></i><b>{{ type.name }}</b></span>
                                         <ul ng-if="type.artifacts.length > 0" class="collapse in"
                                             id="artifact{{artifactIndex}}_type{{$index}}">
                                             <li ng-repeat="artifactItem in type.artifacts">
@@ -144,14 +147,14 @@ function setHiddenInput() {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-09 16:09:42</sys_created_on>
         <sys_id>388fd4902f191110916d50492799b6d9</sys_id>
-        <sys_mod_count>157</sys_mod_count>
+        <sys_mod_count>161</sys_mod_count>
         <sys_name>application_explorer</sys_name>
         <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
         <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name>sys_ui_page_388fd4902f191110916d50492799b6d9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-02-28 14:45:40</sys_updated_on>
+        <sys_updated_on>2023-04-11 06:11:05</sys_updated_on>
     </sys_ui_page>
     <sys_claim action="INSERT_OR_UPDATE">
         <claim_owner_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</claim_owner_scope>
