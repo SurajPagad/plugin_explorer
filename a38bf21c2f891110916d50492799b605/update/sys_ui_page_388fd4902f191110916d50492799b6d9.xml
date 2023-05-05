@@ -50,10 +50,12 @@ sampleApps.controller('mainCtrl', function($scope) {
 
     $scope.toggleIcon = function(event) {
         var target = $j(event.target);
-        if (target.children().length) {
-            target.find('i.rotate').toggleClass('icon-chevron-right icon-chevron-down');
-        } else
+        var tag = target.prop("tagName");
+        if (tag == 'I') {
             target.toggleClass('icon-chevron-right icon-chevron-down');
+        } else {
+            target.siblings('i').toggleClass('icon-chevron-right icon-chevron-down');
+        }
     };
 
     $scope.getlink = function(artifactItem) {
@@ -68,7 +70,7 @@ function setHiddenInput() {
         <description/>
         <direct>false</direct>
         <endpoint/>
-        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
     <g2:requires name="scripts/angular_includes_1.4.js" includes="true" />
     <div data-doctype="true" ng-app="sn_sampleApps">
@@ -95,7 +97,7 @@ function setHiddenInput() {
                     <ul ng-if="artifacts.length > 0 &amp;&amp; !loading" class="main-ul">
                         <li ng-repeat="artifact in artifacts" ng-init="artifactIndex = $index">
                             <span data-toggle="collapse" data-target="#artifact{{artifactIndex}}"
-                                ng-click="toggleIcon($event)" class="list-label"><i class="icon-chevron-down rotate"></i><b>{{ artifact.name }}</b></span>
+                                 class="list-label" ng-click="toggleIcon($event)"><i class="icon-chevron-down rotate"></i><b>{{ artifact.name }}</b></span>
                             <ul ng-if="artifact.types &amp;&amp; artifact.types.length > 0" class="collapse in"
                                 id="artifact{{artifactIndex}}">
                                 <li ng-repeat="type in artifact.types">
@@ -139,6 +141,7 @@ function setHiddenInput() {
             background-color: #121212;
             color: #6002EE;
         }
+		
     </style>
 </j:jelly>]]></html>
         <name>application_explorer</name>
@@ -147,14 +150,14 @@ function setHiddenInput() {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-09 16:09:42</sys_created_on>
         <sys_id>388fd4902f191110916d50492799b6d9</sys_id>
-        <sys_mod_count>161</sys_mod_count>
+        <sys_mod_count>187</sys_mod_count>
         <sys_name>application_explorer</sys_name>
         <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
         <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name>sys_ui_page_388fd4902f191110916d50492799b6d9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-11 06:11:05</sys_updated_on>
+        <sys_updated_on>2023-05-05 13:39:55</sys_updated_on>
     </sys_ui_page>
     <sys_claim action="INSERT_OR_UPDATE">
         <claim_owner_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</claim_owner_scope>
