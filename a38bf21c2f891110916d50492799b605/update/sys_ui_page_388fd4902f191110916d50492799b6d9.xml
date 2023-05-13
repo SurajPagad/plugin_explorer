@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>general</category>
-        <client_script><![CDATA[var sampleApps = angular.module('sn_sampleApps', []);
+        <client_script><![CDATA[
+var sampleApps = angular.module('sn_sampleApps', []);
 sampleApps.controller('mainCtrl', function($scope) {
     $scope.artifacts = [];
     $scope.loading = false;
@@ -29,14 +30,14 @@ sampleApps.controller('mainCtrl', function($scope) {
         }
     });
 
-    $scope.collapseAll = function() {
+    $scope.toggleExpandCollapseAll = function() {
         $scope.artifacts.forEach(function(artifact, artifactIdx) {
             artifact.types.forEach(function(type, typeIdx) {
-                $j('#artifact' + artifactIdx + '_type' + typeIdx).collapse('hide');
+                $j('#artifact' + artifactIdx + '_type' + typeIdx).collapse('toggle');
             });
-            $j('#artifact' + artifactIdx).collapse('hide');
+            $j('#artifact' + artifactIdx).collapse('toggle');
         });
-        $j('i.rotate').addClass('icon-chevron-right').removeClass('icon-chevron-down');
+		$j('i.rotate').toggleClass('icon-chevron-right icon-chevron-down');
     };
 
     $scope.setMode = function() {
@@ -85,7 +86,7 @@ function setHiddenInput() {
                     <button ng-click="setMode()" ng-init="buttonLabel='Dark mode'">{{buttonLabel}}</button>
                 </div>
                 <div ng-if="artifacts.length > 0" class="col-sm-1">
-                    <button ng-click="collapseAll()" title='Collapse All'>[-]</button>
+                    <button ng-click="toggleExpandCollapseAll()" title='Expand/Collapse All'>[Expand/Collapse]</button>
                 </div>
             </div>
             <input type="HIDDEN" name="app_id_hidden" ng-model='app_id_hidden' id="app_id_hidden" />
@@ -150,14 +151,14 @@ function setHiddenInput() {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-09 16:09:42</sys_created_on>
         <sys_id>388fd4902f191110916d50492799b6d9</sys_id>
-        <sys_mod_count>187</sys_mod_count>
+        <sys_mod_count>188</sys_mod_count>
         <sys_name>application_explorer</sys_name>
         <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
         <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name>sys_ui_page_388fd4902f191110916d50492799b6d9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-05-05 13:39:55</sys_updated_on>
+        <sys_updated_on>2023-05-13 19:13:22</sys_updated_on>
     </sys_ui_page>
     <sys_claim action="INSERT_OR_UPDATE">
         <claim_owner_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</claim_owner_scope>
