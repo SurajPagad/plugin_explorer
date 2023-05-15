@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>general</category>
-        <client_script><![CDATA[
-var sampleApps = angular.module('sn_sampleApps', []);
-sampleApps.controller('mainCtrl', function($scope) {
+        <client_script><![CDATA[var appExplorer = angular.module('app_explorer', []);
+appExplorer.controller('mainCtrl', function($scope) {
     $scope.artifacts = [];
     $scope.loading = false;
+    $scope.toggleState = 'hide';
+    $scope.darkMode = false;
     $j("#app_id_hidden").change(function() {
         var appID = gel('app_id_hidden').value;
         var appName = gel('sys_display.app').value;
@@ -30,23 +31,25 @@ sampleApps.controller('mainCtrl', function($scope) {
         }
     });
 
-    $scope.toggleExpandCollapseAll = function() {
+    $scope.expandCollapseAll = function() {
+        var action = $scope.toggleState;
+        if (action == 'hide')
+            $j('i.rotate').removeClass('icon-chevron-down').addClass('icon-chevron-right');
+        else
+            $j('i.rotate').removeClass('icon-chevron-right').addClass('icon-chevron-down');
         $scope.artifacts.forEach(function(artifact, artifactIdx) {
             artifact.types.forEach(function(type, typeIdx) {
-                $j('#artifact' + artifactIdx + '_type' + typeIdx).collapse('toggle');
+                $j('#artifact' + artifactIdx + '_type' + typeIdx).collapse(action);
             });
-            $j('#artifact' + artifactIdx).collapse('toggle');
+            $j('#artifact' + artifactIdx).collapse(action);
         });
-		$j('i.rotate').toggleClass('icon-chevron-right icon-chevron-down');
+
+        $scope.toggleState = $scope.toggleState == 'hide' ? 'show' : 'hide';
     };
 
     $scope.setMode = function() {
         $j('body').toggleClass('dark-mode');
-        if ($scope.buttonLabel === 'Dark mode') {
-            $scope.buttonLabel = 'Light mode';
-        } else {
-            $scope.buttonLabel = 'Dark mode';
-        }
+        $scope.darkMode = $scope.darkMode == true ? false : true;
     };
 
     $scope.toggleIcon = function(event) {
@@ -74,7 +77,7 @@ function setHiddenInput() {
         <html><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
     <g2:requires name="scripts/angular_includes_1.4.js" includes="true" />
-    <div data-doctype="true" ng-app="sn_sampleApps">
+    <div data-doctype="true" ng-app="app_explorer">
         <div ng-controller="mainCtrl">
             <p>Select an application to fetch the artifacts</p>
             <div class="row justify-content-start">
@@ -82,11 +85,11 @@ function setHiddenInput() {
                     <g:ui_reference name="app" id="app_id" table="sys_scope" query="active=true" ng-model="app_id_model"
                         completer="AJAXTableCompleter" onchange="setHiddenInput()" columns="scope" />
                 </div>
-                <div class="col-sm-1">
-                    <button ng-click="setMode()" ng-init="buttonLabel='Dark mode'">{{buttonLabel}}</button>
-                </div>
                 <div ng-if="artifacts.length > 0" class="col-sm-1">
-                    <button ng-click="toggleExpandCollapseAll()" title='Expand/Collapse All'>[Expand/Collapse]</button>
+                    <button ng-click="expandCollapseAll()" ng-model="toggleState" title='Expand/Collapse All'>{{toggleState === 'hide' ?'Collapse All':'Expand All'}}</button>
+                </div>
+				<div class="col-sm-1">
+                    <button ng-click="setMode()" ng-model="darkMode">{{darkMode === true ?'Light mode':'Dark mode'}}</button>
                 </div>
             </div>
             <input type="HIDDEN" name="app_id_hidden" ng-model='app_id_hidden' id="app_id_hidden" />
@@ -151,14 +154,14 @@ function setHiddenInput() {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-09 16:09:42</sys_created_on>
         <sys_id>388fd4902f191110916d50492799b6d9</sys_id>
-        <sys_mod_count>188</sys_mod_count>
+        <sys_mod_count>218</sys_mod_count>
         <sys_name>application_explorer</sys_name>
         <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
         <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name>sys_ui_page_388fd4902f191110916d50492799b6d9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-05-13 19:13:22</sys_updated_on>
+        <sys_updated_on>2023-05-15 07:38:14</sys_updated_on>
     </sys_ui_page>
     <sys_claim action="INSERT_OR_UPDATE">
         <claim_owner_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</claim_owner_scope>
