@@ -37,12 +37,17 @@ appExplorer.controller('mainCtrl', function($scope) {
             $j('i.rotate').removeClass('icon-chevron-down').addClass('icon-chevron-right');
         else
             $j('i.rotate').removeClass('icon-chevron-right').addClass('icon-chevron-down');
-        $scope.artifacts.forEach(function(artifact, artifactIdx) {
+        /*$scope.artifacts.forEach(function(artifact, artifactIdx) {
             artifact.types.forEach(function(type, typeIdx) {
                 $j('#artifact' + artifactIdx + '_type' + typeIdx).collapse(action);
+				if(action == 'hide')
+					$j('#artifact' + artifactIdx + '_type' + typeIdx).attr('style','display:none');
+				else 
+					$j('#artifact' + artifactIdx + '_type' + typeIdx).attr('style','display:block');
             });
             $j('#artifact' + artifactIdx).collapse(action);
-        });
+        });*/
+		$j('.collapsible-content').collapse(action);
 
         $scope.toggleState = $scope.toggleState == 'hide' ? 'show' : 'hide';
     };
@@ -82,7 +87,7 @@ function setHiddenInput() {
             <p>Select an application to fetch the artifacts</p>
             <div class="row justify-content-start">
                 <div class="col-sm-3">
-                    <g:ui_reference name="app" id="app_id" table="sys_scope" query="active=true" ng-model="app_id_model"
+                    <g:ui_reference name="app" id="app_id" table="sys_scope" query="active=true^scope!=global" ng-model="app_id_model"
                         completer="AJAXTableCompleter" onchange="setHiddenInput()" columns="scope" />
                 </div>
                 <div ng-if="artifacts.length > 0" class="col-sm-1">
@@ -102,14 +107,14 @@ function setHiddenInput() {
                         <li ng-repeat="artifact in artifacts" ng-init="artifactIndex = $index">
                             <span data-toggle="collapse" data-target="#artifact{{artifactIndex}}"
                                  class="list-label" ng-click="toggleIcon($event)"><i class="icon-chevron-down rotate"></i><b>{{ artifact.name }}</b></span>
-                            <ul ng-if="artifact.types &amp;&amp; artifact.types.length > 0" class="collapse in"
+                            <ul ng-if="artifact.types &amp;&amp; artifact.types.length > 0" class="collapsible-content collapse in"
                                 id="artifact{{artifactIndex}}">
                                 <li ng-repeat="type in artifact.types">
                                     <span ng-if="type.artifacts &amp;&amp; type.artifacts.length > 0">
                                         <span data-toggle="collapse"
                                             data-target="#artifact{{artifactIndex}}_type{{$index}}"
                                             ng-click="toggleIcon($event)" class="list-label"><i class="icon-chevron-down rotate"></i><b>{{ type.name }}</b></span>
-                                        <ul ng-if="type.artifacts.length > 0" class="collapse in"
+                                        <ul ng-if="type.artifacts.length > 0" class="collapsible-content collapse in"
                                             id="artifact{{artifactIndex}}_type{{$index}}">
                                             <li ng-repeat="artifactItem in type.artifacts">
                                                 <span><a href='{{getlink(artifactItem)}}'
@@ -154,14 +159,14 @@ function setHiddenInput() {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-09 16:09:42</sys_created_on>
         <sys_id>388fd4902f191110916d50492799b6d9</sys_id>
-        <sys_mod_count>218</sys_mod_count>
+        <sys_mod_count>226</sys_mod_count>
         <sys_name>application_explorer</sys_name>
         <sys_package display_value="Application explorer" source="a38bf21c2f891110916d50492799b605">a38bf21c2f891110916d50492799b605</sys_package>
         <sys_policy/>
         <sys_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</sys_scope>
         <sys_update_name>sys_ui_page_388fd4902f191110916d50492799b6d9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-05-15 07:38:14</sys_updated_on>
+        <sys_updated_on>2023-05-18 15:46:58</sys_updated_on>
     </sys_ui_page>
     <sys_claim action="INSERT_OR_UPDATE">
         <claim_owner_scope display_value="Application explorer">a38bf21c2f891110916d50492799b605</claim_owner_scope>
